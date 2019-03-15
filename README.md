@@ -27,13 +27,15 @@ Clone this repo, run `pod install`, then run and see the compile failure result.
 
 # Fix or workaround ?
 
-Maybe there are two current workaround way.
+Maybe there are one workaround way.
 
 ### Disable precompile prefix header:
 
 You can use Xcode's build settings to disable this option. Or using `GCC_PRECOMPILE_PREFIX_HEADER = NO` in your xcconfig files.
 
-### Don't use umbrella headers or modular import in pch files:
+~~### Don't use umbrella headers or modular import in pch files:~~
 
-Import each frameworks's header files one by one, don't use any `@import` syntax or `#import <TestLibrary/TestLibrary.h>`
+~~Import each frameworks's header files one by one, don't use any `@import` syntax or `#import <TestLibrary/TestLibrary.h>`~~
+
+**Tested: This solution does not help.**
 
